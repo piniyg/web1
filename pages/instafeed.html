@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html lang='en'> 
+ <head> 
+  <title>insta feed test </title> 
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="/instafeed.min.js"></script>
+  <script type="text/javascript"> 
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: '1723696640',
+    sortBy: "most-recent",
+    target:'instafeed',
+        limit: 20,
+        template: '<a class="animation" href="{{link}}" target="_blank"><img src="{{image}}" /></a>',   
+        accessToken: '1723696640.1677ed0.ba3aa1e12127401abadd972fe7190f9d'        
+    });
+    userFeed.run();
+</script>
+<style type="text/css">
+@import url( http://fonts.googleapis.com/css?family=Open+Sans:400,600,800,300 );
+body {background:#fff;}
+h1 {font-family:'Open Sans';font-size:22px;color:#666;text-align:center;font-weight:600;}
+#instafeed {width:900px;margin:10px auto;border:1px solid #f9f9f9;padding:20px;background:#fff;}
+#instafeed img {width:200px;margin:2px;}
+</style>
+ </head>
+
+ <body>
+ <h1>MY INSTA FEED</h1>
+ <div id="instafeed"></div> 
+
+
+ 
+ </body>
+</html>
